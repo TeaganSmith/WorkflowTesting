@@ -12,8 +12,9 @@ jobs:
         # for non PR runs we just checkout the default, which is a sha on a branch probably
         uses: actions/checkout@v4
       
-      - name: Install Ruff Linter
-        run: pip install -r .github/requirements.txt
+      - name: Install Ruff
+        run: pip install ruff
+
         # run: pip install -r .github/requirements.txt --break-system-packages
 
       - name: Run Ruff Linter
